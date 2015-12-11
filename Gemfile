@@ -10,7 +10,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+gem 'dotenv-rails', :groups => [:development, :test]
 #########################################################
 # Database: if you want to use Postgres and/or Heroku,
 # comment out mysql gem and use PG (below)

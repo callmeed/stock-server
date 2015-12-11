@@ -5,8 +5,23 @@ require "socket"
 require "refile/s3"
 require "refile/mini_magick"
 
+##
 # Load the S3 Credentials
-S3_CONFIG = YAML.load_file(Rails.root.join('config/s3.yml'))[Rails.env]
+# Amazon S3 credentials are loaded from ENV
+# If you'd rather load them from a YAML file in config/
+# uncomment the line below
+#
+# S3_CONFIG = YAML.load_file(Rails.root.join('config/s3.yml'))[Rails.env]
+
+##
+# Load S3 config from ENV (comment out if you're using a YAML file)
+S3_CONFIG = {}
+S3_CONFIG['access_key_id'] = ENV['access_key_id']
+S3_CONFIG['secret_access_key'] = ENV['secret_access_key']
+S3_CONFIG['region'] = ENV['region']
+S3_CONFIG['bucket'] = ENV['bucket']
+S3_CONFIG['prefix'] = ENV['prefix']
+
 # AWS/S3 options hash
 aws = {
   access_key_id: S3_CONFIG['access_key_id'],
