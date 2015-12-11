@@ -33,7 +33,7 @@ aws = {
 Refile.cache = Refile::Backend::FileSystem.new(Rails.root.join('tmp/refile-cache'))
 Refile.store = Refile::S3.new(prefix: S3_CONFIG['prefix'], **aws)
 # CDN Host for refile
-Refile.cdn_host = "//localhost:3000"
+Refile.cdn_host = Rails.env.production? ? "//d3lvtfmuw4ijh1.cloudfront.net" : "//localhost:3000"
 
 Aws.config.update({
                    region: S3_CONFIG['region'],
