@@ -5,6 +5,12 @@ A Ruby on Rails-based, open-source stock photographer server. Designed for
 people who want to distribute free stock photography (e.g. Unsplash, Pexels,
 Stock Up, etc.).
 
+Demo 
+-----
+You can find a demo at: 
+
+https://childrenusingdevices.herokuapp.com/
+
 Requirements
 -----
 
