@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= SETTINGS['site_name'] %></title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js" %>
+  <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="top-outer">
+  <div id="top" class="container">
+    <h1><%= link_to SETTINGS['site_name'], root_path %></h1>
+  </div>
+</div>
+<div id="main" class="container">
+  <%= yield %>
+</div>
+<div id="bottom-outer">
+  <div id="bottom" class="container">
+    <hr>
+    <p>
+      <strong>contact</strong> <%= mail_to SETTINGS['contact_email'] %>
+    </p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<% if notice %>
+<p id="notice" class="alert alert-success"><%= notice %></p>
+<% end %>
+<h1>Listing Images</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @images.each do |image| %>
+      <tr>
+        <td>
+          <%= link_to(attachment_image_tag(image, :image_data, :fill, 80, 80, class: "img"), image) %>
+        </td>
+        <td><%= image.title %></td>
+        <td><%= image.description %></td>
+        <td><%= image.status %></td>
+        <td><%= link_to 'Show', image %></td>
+        <td><%= link_to 'Edit', edit_image_path(image) %></td>
+        <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Image', new_image_path %>

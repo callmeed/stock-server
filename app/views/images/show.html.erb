@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-md-8">
+    <%= attachment_image_tag(@image, :image_data, :fit, 900, 900, class: "img img-responsive") %>
+  </div>
+  <div id="image-info" class="col-md-4">
+    <h2><%= @image.title %></h2>
+    <p>
+      <strong>Description:</strong>
+      <%= @image.description %>
+    </p>
+
+    <p>
+      <strong>Status:</strong>
+      <%= @image.status %>
+    </p>
+
+    <p>
+      <strong>License:</strong>
+      <%= @image.license_id %>
+    </p>
+
+    <p>
+      <strong>Metadata:</strong>
+      <%= @image.metadata %>
+    </p>
+
+    <p>
+
+    </p>
+
+    <p>
+      <%= link_to @image.presigned_url, class: 'btn btn-primary btn-lg' do %>
+        <i class="fa fa-cloud-download"></i>
+        Download
+      <% end %>
+    </p>
+
+  </div>
+</div>

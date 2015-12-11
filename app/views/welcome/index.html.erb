@@ -1,0 +1,12 @@
+<h1 class="text-center">Welcome</h1>
+<p class="text-center">
+  All images are licensed under a
+  <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero license</a>
+  and are free for personal and commercial use.
+</p>
+<hr>
+<div class="list-container">
+  <div class="image-list-cell">
+    <%= link_to(attachment_image_tag(@image, :image_data, :fit, 1170, 1170, class: "img img-responsive"), @image) %>
+  </div>
+</div>
