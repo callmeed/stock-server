@@ -3,6 +3,10 @@ class WelcomeController < ApplicationController
     @image = Image.first
   end
 
+  def grid
+    @images = Image.all
+  end
+
   def license
   end
 

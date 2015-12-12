@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   # end
 
   resources :images
+
+  get 'grid' => 'welcome#grid'
+
   get 'license' => 'welcome#license'
   get 'terms'   => 'welcome#terms'
   get 'privacy' => 'welcome#privacy'

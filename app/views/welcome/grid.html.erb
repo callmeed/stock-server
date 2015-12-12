@@ -1,0 +1,7 @@
+<div class="masonry-container">
+  <% @images.each do |image| %>
+  <div class="image-cell">
+    <%= link_to(attachment_image_tag(image, :image_data, :fit, 450, 300, class: "img img-responsive"), image) %>
+  </div>
+  <% end %>
+</div>
