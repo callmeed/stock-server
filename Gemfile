@@ -25,6 +25,13 @@ gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
 #########################################################
+# Webserver: use Puma & Foreman locally
+# Also required for Heroku
+#########################################################
+gem 'puma'
+gem 'foreman' 
+
+#########################################################
 # Boostrap and form stuff
 #########################################################
 gem 'bootstrap-sass', '~> 3.3.6'
