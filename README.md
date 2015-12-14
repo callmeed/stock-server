@@ -5,6 +5,8 @@ A Ruby on Rails-based, open-source stock photographer server. Designed for
 people who want to distribute free stock photography (e.g. Unsplash, Pexels,
 Stock Up, etc.).
 
+![Stock Server Screenshot][screen]
+
 Demo
 -----
 You can find a demo at:
@@ -31,3 +33,8 @@ Deploying to Heroku
 
 Deploying to Heroku is fairly easy. Just be sure to set the proper ENV vars with
 `heroku config:set`.
+
+
+
+
+[screen]: https://raw.githubusercontent.com/callmeed/stock-server/master/public/screen.jpg
