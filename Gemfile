@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'annotate'
 #########################################################
 # Database: if you want to use Postgres and/or Heroku,
 # comment out mysql gem and use PG (below)
@@ -29,7 +30,7 @@ gem 'rails_12factor', group: :production
 # Also required for Heroku
 #########################################################
 gem 'puma'
-gem 'foreman' 
+gem 'foreman'
 
 #########################################################
 # Boostrap and form stuff

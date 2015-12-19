@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151208232907) do
+ActiveRecord::Schema.define(version: 20151214204930) do
 
   create_table "images", force: :cascade do |t|
     t.string   "title",                   limit: 255
@@ -28,5 +28,13 @@ ActiveRecord::Schema.define(version: 20151208232907) do
   end
 
   add_index "images", ["license_id"], name: "index_images_on_license_id", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "email",      limit: 255
+    t.integer  "status",     limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
 end

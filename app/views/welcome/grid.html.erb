@@ -1,7 +1,11 @@
-<div class="grid-container">
-  <% @images.each do |image| %>
-  <div class="image-cell">
-    <%= link_to(attachment_image_tag(image, :image_data, :fit, 450, 300, class: "img img-responsive"), image) %>
+<div class="container">
+  <% @images.in_groups_of(4, false) do |group| %>
+  <div class="row grid-row">
+    <% group.each do |image| %>
+    <div class="col-md-3">
+      <%= link_to(attachment_image_tag(image, :image_data, :fill, 600, 600, class: "img img-responsive"), image) %>
+    </div>
+    <% end %>
   </div>
   <% end %>
 </div>

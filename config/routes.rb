@@ -11,13 +11,14 @@ Rails.application.routes.draw do
   # end
 
   resources :images
-
-  get 'grid' => 'welcome#grid'
+  resources :sessions, only: [:create, :destroy]
+  get 'grid' => 'welcome#grid', as: :browse_grid
 
   get 'license' => 'welcome#license'
   get 'terms'   => 'welcome#terms'
   get 'privacy' => 'welcome#privacy'
   get 'contact' => 'welcome#contact'
+  post 'subscribe' => 'welcome#subscribe', as: :subscribe_user
   root 'welcome#index'
 
 end

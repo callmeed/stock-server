@@ -5,8 +5,17 @@
   and are free for personal and commercial use.
 </p>
 <hr>
-<div class="list-container">
-  <div class="image-list-cell">
-    <%= link_to(attachment_image_tag(@image, :image_data, :fit, 1170, 1170, class: "img img-responsive"), @image) %>
+<div class="row">
+  <div class="col-md-6" style="min-height:400px;background-size:cover;background-image:url('<%= attachment_url(@image, :image_data, :fit, 1170, 1170) %>')">
+
+  </div>
+  <div class="col-md-6">
+    <h2>Get Free Images</h2>
+    <p>Subscribe to get notified when we release new, free images. We'll never share your information and you can unsubscribe at any time.</p>
+    <%= bootstrap_form_for(User.new, url: subscribe_user_path) do |f| %>
+      <%= f.text_field :name %>
+      <%= f.text_field :email %>
+      <%= f.submit "Continue" %>
+    <% end %>
   </div>
 </div>
